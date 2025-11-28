@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusPlay | Ultimate Gaming Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="grid-lines"></div>
+        <div class="particles" id="particles"></div>
+        <div class="glow-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                <span class="logo-text">NEXUS<span class="accent">PLAY</span></span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#tournaments">Tournaments</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn btn-ghost">Login</button>
+                <button class="btn btn-primary">Join Now</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                <span>Season 8 Now Live</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="line">ENTER THE</span>
+                <span class="line gradient-text">NEXT DIMENSION</span>
+                <span class="line">OF GAMING</span>
+            </h1>
+            <p class="hero-subtitle">
+                Experience next-gen multiplayer battles, immersive worlds, and competitive esports. 
+                Join millions of players in the ultimate gaming universe.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large">
+                    <i class="fas fa-play"></i> Play Free Now
+                </button>
+                <button class="btn btn-outline btn-large">
+                    <i class="fas fa-film"></i> Watch Trailer
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">0</span>
+                    <span class="stat-suffix">M+</span>
+                    <span class="stat-label">Active Players</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="200">0</span>
+                    <span class="stat-suffix">+</span>
+                    <span class="stat-label">Games Available</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="10">0</span>
+                    <span class="stat-suffix">M</span>
+                    <span class="stat-label">Prize Pool</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-image-container">
+                <div class="hex-frame">
+                    <div class="hex-glow"></div>
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600&h=700&fit=crop" alt="Gaming Hero" class="hero-image">
+                </div>
+                <div class="floating-cards">
+                    <div class="float-card card-1">
+                        <i class="fas fa-trophy"></i>
+                        <span>World Championship</span>
+                    </div>
+                    <div class="float-card card-2">
+                        <i class="fas fa-users"></i>
+                        <span>5v5 Ranked</span>
+                    </div>
+                    <div class="float-card card-3">
+                        <i class="fas fa-bolt"></i>
+                        <span>Live Now</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section class="games-section" id="games">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Featured Games</span>
+                <h2 class="section-title">Popular <span class="gradient-text">Right Now</span></h2>
+                <p class="section-subtitle">Discover the most played games in our platform</p>
+            </div>
+            <div class="games-filter">
+                <button class="filter-btn active" data-filter="all">All Games</button>
+                <button class="filter-btn" data-filter="action">Action</button>
+                <button class="filter-btn" data-filter="rpg">RPG</button>
+                <button class="filter-btn" data-filter="sports">Sports</button>
+                <button class="filter-btn" data-filter="strategy">Strategy</button>
+            </div>
+            <div class="games-grid">
+                <div class="game-card featured" data-category="action">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=500&fit=crop" alt="Cyber Warfare">
+                        <div class="game-overlay">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <div class="game-badge">Hot</div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="tag">FPS</span>
+                            <span class="tag">Multiplayer</span>
+                        </div>
+                        <h3>Cyber Warfare 2077</h3>
+                        <div class="game-meta">
+                            <span><i class="fas fa-users"></i> 2.5M Playing</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-category="rpg">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=500&fit=crop" alt="Dragon Realm">
+                        <div class="game-overlay">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="tag">RPG</span>
+                            <span class="tag">Open World</span>
+                        </div>
+                        <h3>Dragon Realm Online</h3>
+                        <div class="game-meta">
+                            <span><i class="fas fa-users"></i> 1.8M Playing</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-category="sports">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1493711662062-fa541f7f7719?w=400&h=500&fit=crop" alt="Speed Legends">
+                        <div class="game-overlay">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                        <div class="game-badge new">New</div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="tag">Racing</span>
+                            <span class="tag">Sports</span>
+                        </div>
+                        <h3>Speed Legends GT</h3>
+                        <div class="game-meta">
+                            <span><i class="fas fa-users"></i> 950K Playing</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-category="strategy">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=500&fit=crop" alt="Galactic Empire">
+                        <div class="game-overlay">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="tag">Strategy</span>
+                            <span class="tag">Sci-Fi</span>
+                        </div>
+                        <h3>Galactic Empire Wars</h3>
+                        <div class="game-meta">
+                            <span><i class="fas fa-users"></i> 720K Playing</span>
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-category="action">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b2b07?w=400&h=500&fit=crop" alt="Shadow Strike">
+                        <div class="game-overlay">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="tag">Action</span>
+                            <span class="tag">Battle Royale</span>
+                        </div>
+                        <h3>Shadow Strike</h3>
+                        <div class="game-meta">
+                            <span><i class="fas fa-users"></i> 3.2M Playing</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="game-card" data-category="rpg">
+                    <div class="game-image">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=500&fit=crop" alt="Mystic Quest">
+                        <div class="game-overlay">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-tags">
+                            <span class="tag">MMORPG</span>
+                            <span class="tag">Fantasy</span>
+                        </div>
+                        <h3>Mystic Quest Online</h3>
+                        <div class="game-meta">
+                            <span><i class="fas fa-users"></i> 1.1M Playing</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="games-cta">
+                <button class="btn btn-outline">View All Games <i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournaments Section -->
+    <section class="tournaments-section" id="tournaments">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Esports Arena</span>
+                <h2 class="section-title">Upcoming <span class="gradient-text">Tournaments</span></h2>
+                <p class="section-subtitle">Compete with the best players worldwide</p>
+            </div>
+            <div class="tournaments-grid">
+                <div class="tournament-card main">
+                    <div class="tournament-bg">
+                        <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=800&h=500&fit=crop" alt="World Championship">
+                    </div>
+                    <div class="tournament-content">
+                        <div class="tournament-badge live">
+                            <span class="live-dot"></span> Registering
+                        </div>
+                        <h3>World Championship 2024</h3>
+                        <p>The ultimate showdown of elite players from across the globe</p>
+                        <div class="tournament-details">
+                            <div class="detail">
+                                <i class="fas fa-trophy"></i>
+                                <span>$5,000,000</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-users"></i>
+                                <span>256 Teams</span>
+                            </div>
+                            <div class="detail">
+                                <i class="fas fa-calendar"></i>
+                                <span>Dec 15, 2024</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Register Now</button>
+                    </div>
+                    <div class="countdown" id="mainCountdown">
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="minutes">00</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-value" id="seconds">00</span>
+                            <span class="countdown-label">Sec</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tournament-card small">
+                    <div class="tournament-mini-content">
+                        <div class="tournament-badge">Weekly</div>
+                        <h4>Friday Night Showdown</h4>
+                        <div class="tournament-prize">
+                            <i class="fas fa-trophy"></i> $10,000
+                        </div>
+                        <span class="tournament-date"><i class="fas fa-clock"></i> Every Friday</span>
+                    </div>
+                </div>
+                <div class="tournament-card small">
+                    <div class="tournament-mini-content">
+                        <div class="tournament-badge">Monthly</div>
+                        <h4>Champions League</h4>
+                        <div class="tournament-prize">
+                            <i class="fas fa-trophy"></i> $100,000
+                        </div>
+                        <span class="tournament-date"><i class="fas fa-clock"></i> Dec 1, 2024</span>
+                    </div>
+                </div>
+                <div class="tournament-card small">
+                    <div class="tournament-mini-content">
+                        <div class="tournament-badge special">Special</div>
+                        <h4>Streamer Invitational</h4>
+                        <div class="tournament-prize">
+                            <i class="fas fa-trophy"></i> $50,000
+                        </div>
+                        <span class="tournament-date"><i class="fas fa-clock"></i> Dec 8, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="section-container">
+            <div class="section-header centered">
+                <span class="section-tag">Why Choose Us</span>
+                <h2 class="section-title">The Ultimate <span class="gradient-text">Gaming Platform</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Ultra-Low Latency</h3>
+                    <p>Experience gaming with near-zero lag on our global server network spanning 50+ regions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Anti-Cheat Protection</h3>
+                    <p>Advanced AI-powered anti-cheat ensures fair gameplay for all competitors.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>VR Ready</h3>
+                    <p>Full virtual reality support for immersive next-generation gaming experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Voice Chat</h3>
+                    <p>Crystal-clear integrated voice communication with spatial audio technology.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Detailed Analytics</h3>
+                    <p>Track your performance with comprehensive stats and AI-driven improvement tips.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Ranked System</h3>
+                    <p>Climb the competitive ladder from Bronze to Grandmaster and prove your skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="community-section" id="community">
+        <div class="section-container">
+            <div class="community-content">
+                <div class="community-text">
+                    <span class="section-tag">Join the Community</span>
+                    <h2 class="section-title">Connect with <span class="gradient-text">50 Million</span> Gamers</h2>
+                    <p>Join our thriving community of passionate gamers. Share strategies, find teammates, participate in events, and be part of the biggest gaming revolution.</p>
+                    <div class="community-stats">
+                        <div class="community-stat">
+                            <i class="fab fa-discord"></i>
+                            <div>
+                                <span class="number">5M+</span>
+                                <span class="label">Discord Members</span>
+                            </div>
+                        </div>
+                        <div class="community-stat">
+                            <i class="fab fa-twitch"></i>
+                            <div>
+                                <span class="number">100K+</span>
+                                <span class="label">Streamers</span>
+                            </div>
+                        </div>
+                        <div class="community-stat">
+                            <i class="fab fa-youtube"></i>
+                            <div>
+                                <span class="number">10M+</span>
+                                <span class="label">Subscribers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-buttons">
+                        <button class="social-btn discord"><i class="fab fa-discord"></i> Join Discord</button>
+                        <button class="social-btn twitch"><i class="fab fa-twitch"></i> Watch Streams</button>
+                    </div>
+                </div>
+                <div class="community-visual">
+                    <div class="testimonials-carousel" id="testimonialCarousel">
+                        <div class="testimonial-card active">
+                            <div class="testimonial-header">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="User">
+                                <div>
+                                    <h4>Alex "Shadow" Chen</h4>
+                                    <span>Pro Player • Team Nexus</span>
+                                </div>
+                            </div>
+                            <p>"NexusPlay has completely transformed my gaming career. The competitive scene here is unmatched!"</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="User">
+                                <div>
+                                    <h4>Sarah "Phoenix" Miller</h4>
+                                    <span>Content Creator • 2M Followers</span>
+                                </div>
+                            </div>
+                            <p>"The streaming integration is seamless. My community loves the exclusive features!"</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="User">
+                                <div>
+                                    <h4>Mike "Thunder" Ross</h4>
+                                    <span>Esports Coach • Champions League</span>
+                                </div>
+                            </div>
+                            <p>"The analytics tools helped my team improve by 40%. Essential for serious competitors."</p>
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="about">
+        <div class="section-container">
+            <div class="section-header centered">
+                <span class="section-tag">Membership Plans</span>
+                <h2 class="section-title">Choose Your <span class="gradient-text">Power Level</span></h2>
+                <p class="section-subtitle">Unlock exclusive features and dominate the competition</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to free games</li>
+                        <li><i class="fas fa-check"></i> Basic matchmaking</li>
+                        <li><i class="fas fa-check"></i> Community forums</li>
+                        <li><i class="fas fa-check"></i> Weekly tournaments</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Priority servers</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Exclusive skins</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full">Get Started</button>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro Gamer</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">14.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All Starter features</li>
+                        <li><i class="fas fa-check"></i> Priority matchmaking</li>
+                        <li><i class="fas fa-check"></i> Exclusive game modes</li>
+                        <li><i class="fas fa-check"></i> Monthly rewards</li>
+                        <li><i class="fas fa-check"></i> Priority servers</li>
+                        <li><i class="fas fa-check"></i> 100 exclusive skins</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full">Subscribe Now</button>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Elite</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">29.99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> All Pro features</li>
+                        <li><i class="fas fa-check"></i> Private servers</li>
+                        <li><i class="fas fa-check"></i> Early access games</li>
+                        <li><i class="fas fa-check"></i> Personal coach AI</li>
+                        <li><i class="fas fa-check"></i> VIP tournaments</li>
+                        <li><i class="fas fa-check"></i> Unlimited skins</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full">Go Elite</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="section-container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay in the <span class="gradient-text">Game</span></h2>
+                    <p>Subscribe to get exclusive updates, early access, and special rewards!</p>
+                </div>
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="input-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">
+                            <span>Subscribe</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back To Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon"><i class="fas fa-gamepad"></i></span>
+                        <span class="logo-text">NEXUS<span class="accent">PLAY</span></span>
+                    </div>
+                    <p>The ultimate gaming platform for competitive players worldwide. Join millions in the next evolution of gaming.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitch"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Platform</h4>
+                        <ul>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Games Library</a></li>
+                            <li><a href="#">Tournaments</a></li>
+                            <li><a href="#">Leaderboards</a></li>
+                            <li><a href="#">Store</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="#">Forums</a></li>
+                            <li><a href="#">Discord Server</a></li>
+                            <li><a href="#">Content Creators</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">News</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Bug Reports</a></li>
+                            <li><a href="#">Account Recovery</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press Kit</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Investors</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <p class="copyright">&copy; 2024 NexusPlay. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
