@@ -125,7 +125,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 👨‍💻 Author
 
-**Labuduwa HNDIT**
+**Dumindu Damsara**
 
 ---
 
