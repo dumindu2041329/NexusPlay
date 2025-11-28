@@ -34,35 +34,12 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
 });
 
-// Prevent body scroll when mobile menu is open
-const setBodyScroll = (shouldLock) => {
-    document.body.style.overflow = shouldLock ? 'hidden' : '';
-};
-
 // Close mobile nav when clicking a link
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
-        setBodyScroll(false);
     });
-});
-
-// Close mobile nav when clicking outside
-document.addEventListener('click', (e) => {
-    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-        setBodyScroll(false);
-    }
-});
-
-// Toggle body scroll on hamburger click
-hamburger.addEventListener('click', () => {
-    // Small delay to let the classList toggle complete
-    setTimeout(() => {
-        setBodyScroll(navLinks.classList.contains('active'));
-    }, 10);
 });
 
 // ===== Smooth Scroll for Navigation Links =====
