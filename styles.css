@@ -28,6 +28,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -36,13 +37,6 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
-    width: 100%;
-}
-
-/* Prevent horizontal scroll */
-html {
-    overflow-x: hidden;
-    width: 100%;
 }
 
 a {
@@ -105,7 +99,7 @@ img {
     height: 400px;
     background: var(--primary);
     top: -100px;
-    right: -100px;
+    right: 0;
     animation-delay: 0s;
 }
 
@@ -114,7 +108,7 @@ img {
     height: 300px;
     background: var(--secondary);
     bottom: 20%;
-    left: -50px;
+    left: 0;
     animation-delay: -5s;
 }
 
@@ -330,8 +324,6 @@ img {
     max-width: 1400px;
     margin: 0 auto;
     position: relative;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .hero-content {
@@ -444,6 +436,8 @@ img {
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: visible;
+    max-width: 100%;
 }
 
 .hero-image-container {
@@ -485,7 +479,6 @@ img {
     top: 0;
     left: 0;
     pointer-events: none;
-    overflow: hidden;
 }
 
 .float-card {
@@ -500,7 +493,6 @@ img {
     gap: 0.75rem;
     font-weight: 600;
     animation: float 4s ease-in-out infinite;
-    white-space: nowrap;
 }
 
 .float-card i {
@@ -510,19 +502,19 @@ img {
 
 .card-1 {
     top: 10%;
-    right: -20%;
+    right: -10%;
     animation-delay: 0s;
 }
 
 .card-2 {
     bottom: 30%;
-    left: -25%;
+    left: -10%;
     animation-delay: -1.5s;
 }
 
 .card-3 {
     bottom: 10%;
-    right: -10%;
+    right: 0%;
     animation-delay: -3s;
 }
 
@@ -574,9 +566,6 @@ img {
     max-width: 1400px;
     margin: 0 auto;
     padding: 6rem 2rem;
-    width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 .section-header {
@@ -647,7 +636,6 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    width: 100%;
 }
 
 .game-card {
@@ -788,7 +776,6 @@ img {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
-    width: 100%;
 }
 
 .tournament-card {
@@ -953,7 +940,6 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    width: 100%;
 }
 
 .feature-card {
@@ -1178,7 +1164,6 @@ img {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     align-items: center;
-    width: 100%;
 }
 
 .pricing-card {
@@ -1398,8 +1383,6 @@ img {
     max-width: 1400px;
     margin: 0 auto;
     padding: 4rem 2rem 2rem;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .footer-main {
@@ -1570,23 +1553,6 @@ img {
 }
 
 @media (max-width: 768px) {
-    /* Prevent any overflow */
-    body, html {
-        max-width: 100vw;
-        overflow-x: hidden;
-    }
-
-    * {
-        max-width: 100%;
-    }
-
-    /* Navigation */
-    .nav-container {
-        padding: 0 1rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
     .nav-links,
     .nav-buttons {
         display: none;
@@ -1596,18 +1562,6 @@ img {
         display: flex;
     }
 
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
     .nav-links.active {
         display: flex;
         position: absolute;
@@ -1615,42 +1569,10 @@ img {
         left: 0;
         width: 100%;
         flex-direction: column;
-        background: rgba(10, 10, 15, 0.98);
-        backdrop-filter: blur(20px);
+        background: var(--bg-dark);
         padding: 2rem;
         gap: 1.5rem;
         border-bottom: 1px solid var(--border-color);
-        text-align: center;
-    }
-
-    .nav-links.active a {
-        font-size: 1.1rem;
-        padding: 0.5rem 0;
-    }
-
-    /* Hero Section */
-    .hero {
-        padding: 6rem 1rem 3rem;
-        min-height: auto;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .hero-content {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .hero-visual {
-        width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .hero-badge {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-        margin-bottom: 1.5rem;
     }
 
     .hex-frame {
@@ -1658,8 +1580,31 @@ img {
         height: 320px;
     }
 
-    .floating-cards {
-        display: none;
+    .float-card {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .card-1 {
+        right: 0;
+        top: 5%;
+    }
+
+    .card-2 {
+        left: 0;
+        bottom: 35%;
+    }
+
+    .card-3 {
+        right: 5%;
+        bottom: 5%;
+    }
+
+    .orb-1,
+    .orb-2,
+    .orb-3 {
+        width: 200px;
+        height: 200px;
     }
 
     .stat-divider {
@@ -1670,123 +1615,9 @@ img {
         gap: 1.5rem;
     }
 
-    .stat-number {
-        font-size: 2rem;
-    }
-
-    .stat-suffix {
-        font-size: 1.25rem;
-    }
-
-    .scroll-indicator {
-        display: none;
-    }
-
-    /* Section Containers */
-    .section-container {
-        padding: 4rem 1rem;
-        width: 100%;
-        max-width: 100vw;
-        box-sizing: border-box;
-    }
-
-    .section-header {
-        margin-bottom: 2rem;
-    }
-
-    /* Games Section */
-    .games-filter {
-        justify-content: center;
-        gap: 0.5rem;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .filter-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-    }
-
-    .games-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        width: 100%;
-    }
-
-    .game-image {
-        height: 200px;
-    }
-
-    .game-card.featured .game-image {
-        height: 220px;
-    }
-
-    /* Features Section */
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .feature-card {
-        padding: 1.5rem;
-    }
-
-    /* Tournament Section */
-    .tournament-content {
-        padding: 1.5rem;
-    }
-
-    .tournament-content h3 {
-        font-size: 1.5rem;
-    }
-
-    .tournament-details {
-        gap: 1rem;
-    }
-
     .countdown {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 0.75rem;
-        padding: 0.75rem;
-    }
-
-    .countdown-item {
-        min-width: 50px;
-    }
-
-    .countdown-value {
-        font-size: 1.5rem;
-    }
-
-    /* Community Section */
-    .community-content {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .community-stats {
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 100%;
-    }
-
-    .testimonials-carousel {
-        height: 340px;
-    }
-
-    .testimonial-card {
-        padding: 1.5rem;
-    }
-
-    /* Pricing Section */
-    .pricing-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .pricing-card {
-        padding: 2rem;
     }
 
     .pricing-card.popular {
@@ -1797,369 +1628,62 @@ img {
         transform: translateY(-10px);
     }
 
-    .amount {
-        font-size: 2.5rem;
-    }
-
-    /* Newsletter Section */
     .newsletter-content {
         flex-direction: column;
         text-align: center;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .newsletter-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .newsletter-form {
-        width: 100%;
-        max-width: 100%;
     }
 
     .input-group {
         flex-direction: column;
     }
 
-    /* Footer */
-    .footer-container {
-        padding: 3rem 1rem 2rem;
-    }
-
-    .footer-main {
-        gap: 2rem;
-    }
-
     .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .footer-column h4 {
-        margin-bottom: 1rem;
+        grid-template-columns: 1fr;
     }
 
     .footer-bottom {
         flex-direction: column;
         text-align: center;
-        gap: 1rem;
     }
 
     .footer-legal {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 1rem;
-    }
-
-    /* Back to Top Button */
-    .back-to-top {
-        right: 1rem;
-        bottom: 1rem;
-        width: 42px;
-        height: 42px;
     }
 }
 
 @media (max-width: 480px) {
-    /* Ensure no overflow on small screens */
-    body, html {
-        max-width: 100vw;
-        overflow-x: hidden !important;
-    }
-
-    .hero, .section-container, .nav-container,
-    .footer-container, .newsletter-content,
-    .community-content {
-        max-width: 100vw;
-        overflow-x: hidden;
-    }
-
-    /* Typography */
     .hero-title {
-        font-size: 1.75rem;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .section-tag {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-    }
-
-    /* Logo */
-    .logo-text {
-        font-size: 1.25rem;
-    }
-
-    .logo-icon {
-        font-size: 1.5rem;
-    }
-
-    /* Buttons */
-    .btn {
-        padding: 0.625rem 1rem;
-        font-size: 0.875rem;
-    }
-
-    .btn-large {
-        padding: 0.75rem 1.25rem;
-        font-size: 0.9rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    /* Hero Stats */
-    .hero-stats {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .stat-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .stat-label {
-        display: inline;
-    }
-
-    /* Hex Frame */
-    .hex-frame {
-        width: 220px;
-        height: 260px;
-    }
-
-    /* Games Filter - horizontal scroll */
-    .games-filter {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: flex-start;
-        padding-bottom: 0.5rem;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        margin: 0 -1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .games-filter::-webkit-scrollbar {
-        display: none;
-    }
-
-    .filter-btn {
-        flex-shrink: 0;
-    }
-
-    /* Game Cards */
-    .game-info {
-        padding: 1rem;
-    }
-
-    .game-info h3 {
-        font-size: 1.1rem;
-    }
-
-    /* Tournament Cards */
-    .tournament-card.small {
-        padding: 1rem;
-    }
-
-    .tournament-mini-content h4 {
-        font-size: 1rem;
-    }
-
-    /* Features */
-    .feature-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.25rem;
-    }
-
-    .feature-card h3 {
-        font-size: 1.1rem;
-    }
-
-    /* Community */
-    .community-stat i {
-        font-size: 1.5rem;
-    }
-
-    .community-stat .number {
-        font-size: 1.25rem;
-    }
-
-    .social-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .social-btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .testimonials-carousel {
-        height: 380px;
-    }
-
-    .testimonial-header img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .testimonial-header h4 {
-        font-size: 1rem;
-    }
-
-    .testimonial-card > p {
-        font-size: 1rem;
-    }
-
-    /* Pricing */
-    .pricing-card {
-        padding: 1.5rem;
-    }
-
-    .pricing-header h3 {
-        font-size: 1.25rem;
-    }
-
-    .amount {
         font-size: 2rem;
     }
 
-    /* Footer */
-    .footer-links {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-social {
-        flex-wrap: wrap;
-    }
-
-    .social-link {
-        width: 40px;
-        height: 40px;
-    }
-
-    /* Orbs - reduce size on mobile for performance */
-    .orb-1 {
-        width: 200px;
-        height: 200px;
-    }
-
-    .orb-2 {
-        width: 150px;
-        height: 150px;
-    }
-
-    .orb-3 {
-        width: 120px;
-        height: 120px;
-    }
-}
-
-/* Extra small devices */
-@media (max-width: 360px) {
-    .hero-title {
-        font-size: 1.5rem;
-    }
-
     .section-title {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
     }
 
-    .nav-container {
-        padding: 0 0.75rem;
+    .btn-large {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
     }
 
-    .logo-text {
-        font-size: 1.1rem;
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-cards {
+        display: none;
     }
 
     .hex-frame {
-        width: 180px;
-        height: 210px;
+        width: 240px;
+        height: 280px;
     }
 
-    .countdown-item {
-        min-width: 45px;
-    }
-
-    .countdown-value {
-        font-size: 1.25rem;
-    }
-}
-
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-
-    .grid-lines,
-    .orb,
-    .particle {
-        animation: none;
-    }
-
-    html {
-        scroll-behavior: auto;
-    }
-}
-
-/* Touch device optimizations */
-@media (hover: none) and (pointer: coarse) {
-    .game-card:hover,
-    .feature-card:hover,
-    .pricing-card:hover,
-    .tournament-card:hover {
-        transform: none;
-    }
-
-    .game-card:hover .game-image img {
-        transform: none;
-    }
-
-    .game-overlay {
-        opacity: 1;
-        background: rgba(0, 0, 0, 0.3);
-    }
-
-    .play-btn {
-        transform: scale(1);
-    }
-
-    .btn:hover {
-        transform: none;
-    }
-
-    .social-link:hover {
-        transform: none;
-    }
-
-    /* Improve tap targets */
-    .nav-links a,
-    .footer-column a {
-        padding: 0.5rem 0;
-        display: block;
+    .orb-1,
+    .orb-2,
+    .orb-3 {
+        width: 150px;
+        height: 150px;
     }
 }
 
